@@ -5,7 +5,8 @@ import csv
 INDICATORS = {
     'gdp_billions': 'NY.GDP.MKTP.CD',
     'unemployment_rate': 'SL.UEM.TOTL.ZS',
-    'inflation_rate': 'FP.CPI.TOTL.ZG'
+    'inflation_rate': 'FP.CPI.TOTL.ZG',
+    'fdi_billions': 'BX.KLT.DINV.CD.WD'
 }
 
 # Function to fetch any indicator for any country
@@ -21,7 +22,7 @@ def fetch_indicator(country_code, country_name, indicator_code, indicator_name):
         value = record['value']
 
         if value is not None:
-            if indicator_name == 'gdp_billions':
+            if indicator_name == 'gdp_billions' or indicator_name == 'fdi_billions':
                 value = round(value / 1_000_000_000, 2)
             else:
                 value = round(value, 2)
@@ -47,12 +48,16 @@ print("Fetching inflation data...")
 nigeria_inflation = fetch_indicator("NG", "Nigeria", INDICATORS['inflation_rate'], 'inflation_rate')
 uk_inflation = fetch_indicator("GB", "United Kingdom", INDICATORS['inflation_rate'], 'inflation_rate')
 
+print("Fetching FDI data...")
+nigeria_fdi = fetch_indicator("NG", "Nigeria", INDICATORS['fdi_billions'], 'fdi_billions')
+uk_fdi = fetch_indicator("GB", "United Kingdom", INDICATORS['fdi_billions'], 'fdi_billions')
+
 # Combine all data
-all_data = nigeria_gdp + uk_gdp + nigeria_unemployment + uk_unemployment + nigeria_inflation + uk_inflation
+all_data = nigeria_gdp + uk_gdp + nigeria_unemployment + uk_unemployment + nigeria_inflation + uk_inflation + nigeria_fdi + uk_fdi
 
 # Save to CSV
 with open('economic_data.csv', 'w', newline='') as file:
-    writer = csv.DictWriter(file, fieldnames=['country', 'year', 'gdp_billions', 'unemployment_rate', 'inflation_rate'])
+    writer = csv.DictWriter(file, fieldnames=['country', 'year', 'gdp_billions', 'unemployment_rate', 'inflation_rate', 'fdi_billions'])
     writer.writeheader()
     writer.writerows(all_data)
 

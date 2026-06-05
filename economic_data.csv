@@ -1,57 +1,75 @@
-country,year,gdp_billions,unemployment_rate,inflation_rate
-Nigeria,2024,252.26,,
-Nigeria,2023,487.39,,
-Nigeria,2022,646.95,,
-Nigeria,2021,609.15,,
-Nigeria,2020,598.59,,
-Nigeria,2019,668.22,,
-Nigeria,2018,421.74,,
-Nigeria,2017,375.75,,
-Nigeria,2016,404.65,,
-United Kingdom,2024,3686.03,,
-United Kingdom,2023,3420.8,,
-United Kingdom,2022,3181.24,,
-United Kingdom,2021,3194.56,,
-United Kingdom,2020,2724.0,,
-United Kingdom,2019,2875.71,,
-United Kingdom,2018,2897.03,,
-United Kingdom,2017,2699.12,,
-United Kingdom,2016,2706.81,,
-Nigeria,2025,,3.06,
-Nigeria,2024,,3.04,
-Nigeria,2023,,3.07,
-Nigeria,2022,,3.83,
-Nigeria,2021,,5.4,
-Nigeria,2020,,5.71,
-Nigeria,2019,,5.21,
-Nigeria,2018,,5.07,
-Nigeria,2017,,4.83,
-Nigeria,2016,,4.5,
-United Kingdom,2025,,4.75,
-United Kingdom,2024,,4.36,
-United Kingdom,2023,,4.03,
-United Kingdom,2022,,3.77,
-United Kingdom,2021,,4.86,
-United Kingdom,2020,,4.47,
-United Kingdom,2019,,3.66,
-United Kingdom,2018,,4.14,
-United Kingdom,2017,,4.5,
-United Kingdom,2016,,4.91,
-Nigeria,2024,,,33.24
-Nigeria,2023,,,24.66
-Nigeria,2022,,,18.85
-Nigeria,2021,,,16.95
-Nigeria,2020,,,13.25
-Nigeria,2019,,,11.4
-Nigeria,2018,,,12.1
-Nigeria,2017,,,16.5
-Nigeria,2016,,,15.7
-United Kingdom,2024,,,3.27
-United Kingdom,2023,,,6.79
-United Kingdom,2022,,,7.92
-United Kingdom,2021,,,2.52
-United Kingdom,2020,,,0.99
-United Kingdom,2019,,,1.74
-United Kingdom,2018,,,2.29
-United Kingdom,2017,,,2.56
-United Kingdom,2016,,,1.01
+country,year,gdp_billions,unemployment_rate,inflation_rate,fdi_billions
+Nigeria,2024,252.26,,,
+Nigeria,2023,487.39,,,
+Nigeria,2022,646.95,,,
+Nigeria,2021,609.15,,,
+Nigeria,2020,598.59,,,
+Nigeria,2019,668.22,,,
+Nigeria,2018,421.74,,,
+Nigeria,2017,375.75,,,
+Nigeria,2016,404.65,,,
+United Kingdom,2024,3686.03,,,
+United Kingdom,2023,3420.8,,,
+United Kingdom,2022,3181.24,,,
+United Kingdom,2021,3194.56,,,
+United Kingdom,2020,2724.0,,,
+United Kingdom,2019,2875.71,,,
+United Kingdom,2018,2897.03,,,
+United Kingdom,2017,2699.12,,,
+United Kingdom,2016,2706.81,,,
+Nigeria,2025,,3.06,,
+Nigeria,2024,,3.04,,
+Nigeria,2023,,3.07,,
+Nigeria,2022,,3.83,,
+Nigeria,2021,,5.4,,
+Nigeria,2020,,5.71,,
+Nigeria,2019,,5.21,,
+Nigeria,2018,,5.07,,
+Nigeria,2017,,4.83,,
+Nigeria,2016,,4.5,,
+United Kingdom,2025,,4.75,,
+United Kingdom,2024,,4.36,,
+United Kingdom,2023,,4.03,,
+United Kingdom,2022,,3.77,,
+United Kingdom,2021,,4.86,,
+United Kingdom,2020,,4.47,,
+United Kingdom,2019,,3.66,,
+United Kingdom,2018,,4.14,,
+United Kingdom,2017,,4.5,,
+United Kingdom,2016,,4.91,,
+Nigeria,2024,,,33.24,
+Nigeria,2023,,,24.66,
+Nigeria,2022,,,18.85,
+Nigeria,2021,,,16.95,
+Nigeria,2020,,,13.25,
+Nigeria,2019,,,11.4,
+Nigeria,2018,,,12.1,
+Nigeria,2017,,,16.5,
+Nigeria,2016,,,15.7,
+United Kingdom,2024,,,3.27,
+United Kingdom,2023,,,6.79,
+United Kingdom,2022,,,7.92,
+United Kingdom,2021,,,2.52,
+United Kingdom,2020,,,0.99,
+United Kingdom,2019,,,1.74,
+United Kingdom,2018,,,2.29,
+United Kingdom,2017,,,2.56,
+United Kingdom,2016,,,1.01,
+Nigeria,2024,,,,1.08
+Nigeria,2023,,,,1.87
+Nigeria,2022,,,,-0.19
+Nigeria,2021,,,,3.31
+Nigeria,2020,,,,2.39
+Nigeria,2019,,,,2.31
+Nigeria,2018,,,,0.78
+Nigeria,2017,,,,2.41
+Nigeria,2016,,,,3.45
+United Kingdom,2024,,,,-12.96
+United Kingdom,2023,,,,13.79
+United Kingdom,2022,,,,92.78
+United Kingdom,2021,,,,102.43
+United Kingdom,2020,,,,157.19
+United Kingdom,2019,,,,19.79
+United Kingdom,2018,,,,-25.06
+United Kingdom,2017,,,,125.36
+United Kingdom,2016,,,,324.81

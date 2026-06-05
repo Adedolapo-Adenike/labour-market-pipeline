@@ -7,10 +7,12 @@ df = pd.read_csv('economic_data.csv')
 gdp = df[['country', 'year', 'gdp_billions']].dropna()
 unemployment = df[['country', 'year', 'unemployment_rate']].dropna()
 inflation = df[['country', 'year', 'inflation_rate']].dropna()
+fdi = df[['country', 'year', 'fdi_billions']].dropna()
 
-# Merge all three together on country and year
+# Merge all four together on country and year
 merged = gdp.merge(unemployment, on=['country', 'year'], how='outer')
 merged = merged.merge(inflation, on=['country', 'year'], how='outer')
+merged = merged.merge(fdi, on=['country', 'year'], how='outer')
 
 # Sort by country and year
 merged = merged.sort_values(['country', 'year']).reset_index(drop=True)
