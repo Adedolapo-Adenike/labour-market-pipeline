@@ -1,0 +1,42 @@
+CREATE DATABASE IF NOT EXISTS LABOUR_MARKET_DB;
+
+USE DATABASE LABOUR_MARKET_DB;
+
+CREATE SCHEMA IF NOT EXISTS RAW;
+CREATE SCHEMA IF NOT EXISTS STAGING;
+CREATE SCHEMA IF NOT EXISTS MART;
+
+USE SCHEMA RAW;
+
+CREATE TABLE IF NOT EXISTS ECONOMIC_DATA (
+    country VARCHAR(100),
+    year INT,
+    gdp_billions FLOAT,
+    unemployment_rate FLOAT,
+    inflation_rate FLOAT,
+    fdi_billions FLOAT
+);
+USE DATABASE LABOUR_MARKET_DB;
+USE SCHEMA RAW;
+
+CREATE OR REPLACE STAGE s3_stage
+    URL = 's3://lmp-data-193619625516-eu-west-2-an/processed/'
+    CREDENTIALS = (
+        AWS_KEY_ID = 'YOUR_AWS_KEY_HERE'
+    AWS_SECRET_KEY = 'YOUR_AWS_SECRET_HERE'
+)
+    FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);
+COPY INTO ECONOMIC_DATA
+FROM @s3_stage/combined_data.csv
+FILE_FORMAT = (TYPE = CSV FIELD_OPTIONALLY_ENCLOSED_BY = '"' SKIP_HEADER = 1);
+SELECT * FROM ECONOMIC_DATA;
+-- Average GDP by country
+SELECT 
+    country,
+    ROUND(AVG(gdp_billions), 2) AS avg_gdp,
+    ROUND(AVG(unemployment_rate), 2) AS avg_unemployment,
+    ROUND(AVG(inflation_rate), 2) AS avg_inflation
+FROM ECONOMIC_DATA
+WHERE gdp_billions IS NOT NULL
+GROUP BY country
+ORDER BY avg_gdp DESC;
