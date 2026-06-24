@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw
+    database: LABOUR_MARKET_DB
+    schema: RAW
+    tables:
+      - name: ECONOMIC_DATA
+        description: "Raw economic data for Nigeria and UK from World Bank API"
+        columns:
+          - name: country
+            description: "Country name - Nigeria or United Kingdom"
+          - name: year
+            description: "Year of the data"
+          - name: gdp_billions
+            description: "GDP in billions USD"
+          - name: unemployment_rate
+            description: "Unemployment rate as a percentage"
+          - name: inflation_rate
+            description: "Inflation rate as a percentage"
+          - name: fdi_billions
+            description: "Foreign Direct Investment in billions USD"
