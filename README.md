@@ -7,6 +7,21 @@ using the World Bank API.
 
 ---
 
+## Live Dashboard
+
+View the interactive dashboard here:
+https://datastudio.google.com/s/phcV0Wt-4FE
+
+The dashboard shows:
+- Nigeria vs UK GDP comparison (2016-2024)
+- Nigeria vs UK Unemployment comparison
+- Nigeria vs UK Inflation comparison
+- GDP Gap trend over time
+- Inflation Gap trend over time
+- Key economic metrics scorecard
+
+---
+
 ## Project Purpose
 
 This pipeline tracks key economic indicators that drive labour 
@@ -34,8 +49,6 @@ inflation, and foreign direct investment (FDI).
 ## Data Sources
 
 - **World Bank API** - GDP, unemployment, inflation, FDI
-- **ONS UK** - UK labour market statistics
-- **Reed.co.uk API** - UK data engineering job postings
 
 ---
 
@@ -50,7 +63,7 @@ inflation, and foreign direct investment (FDI).
 
 ## Pipeline Architecture
 
-World Bank API -> Python ingest.py -> AWS S3 -> Snowflake -> dbt -> Looker Studio
+World Bank API -> Python ingest.py -> AWS S3 -> Snowflake -> dbt -> Airflow -> Looker Studio
 
 ---
 
@@ -60,11 +73,11 @@ World Bank API -> Python ingest.py -> AWS S3 -> Snowflake -> dbt -> Looker Studi
 - [x] World Bank API integration
 - [x] Data cleaning with pandas
 - [x] 4 economic indicators
-- [ ] AWS S3 upload
-- [ ] Snowflake warehouse
-- [ ] dbt transformations
-- [ ] Airflow orchestration
-- [ ] Looker Studio dashboard
+- [x] AWS S3 upload
+- [x] Snowflake warehouse
+- [x] dbt transformations
+- [x] Airflow orchestration
+- [x] Looker Studio dashboard
 
 ---
 
